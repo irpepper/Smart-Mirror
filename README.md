@@ -17,6 +17,12 @@ Requirements:
 - Pause and play button for music
 
 Non-Functional Requirements:
+-Who
+-how
+-when
+-why
+-where
+-performance
 
 Contraints:
 - 3 Group Members
