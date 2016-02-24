@@ -7,6 +7,8 @@
 body {
 	background-image: url(test_background.jpg);
 	background-color: #000000;
+	background-repeat:no-repeat;
+	background-size:auto;
 	margin-left: 0px;
 	margin-top: 0px;
 	margin-right: 0px;
@@ -38,7 +40,93 @@ body,td,th {
 		var today = new Date();
 		var h = today.getHours();
 		var m = today.getMinutes();
+		var dayOfTheWeek = today.getDay();
+		var dayOfTheMonth = today.getDate();
+		var thisMonth = today.getMonth();
+		var actualDay, actualMonth;
 		m = checkTime(m);
+		
+		switch (dayOfTheWeek)
+		{
+			case 0:
+				actualDay = "Sunday";
+				break;
+			case 1:
+				actualDay = "Monday";
+				break;
+			case 2:
+				actualDay = "Tuesday";
+				break;
+			case 3:
+				actualDay = "Wednesday";
+				break;
+			case 4:
+				actualDay = "Thursday";
+				break;
+			case 5:
+				actualDay = "Friday";
+				break;
+			case 6:
+				actualDay = "Saturday";
+				break;					
+		}
+		
+		switch (thisMonth)
+		{
+			case 0:
+				actualMonth = "January";
+				break;
+			case 1:
+				actualMonth = "February";
+				break;
+			case 2:
+				actualMonth = "March";
+				break;
+			case 3:
+				actualMonth = "April";
+				break;
+			case 4:
+				actualMonth = "May";
+				break;
+			case 5:
+				actualMonth = "June";
+				break;
+			case 6:
+				actualMonth = "July";
+				break;
+			case 7:
+				actualMonth = "August";
+				break;		
+			case 8:
+				actualMonth = "September";
+				break;	
+			case 9:
+				actualMonth = "October";
+				break;	
+			case 10:
+				actualMonth = "November";
+				break;	
+			case 11:
+				actualMonth = "December";
+				break;				
+		}
+		
+		if (dayOfTheMonth == 1 || dayOfTheMonth == 21 || dayOfTheMonth == 31)
+		{
+			document.getElementById('weatherTitle').innerHTML = actualDay + ", " + actualMonth + " " + dayOfTheMonth + "st";
+		}
+		else if (dayOfTheMonth == 2 || dayOfTheMonth == 22)
+		{
+			document.getElementById('weatherTitle').innerHTML = actualDay + ", " + actualMonth + " " + dayOfTheMonth + "nd";
+		}
+		else if (dayOfTheMonth == 3 || dayOfTheMonth == 23)
+		{
+			document.getElementById('weatherTitle').innerHTML = actualDay + ", " + actualMonth + " " + dayOfTheMonth + "rd";
+		}
+		else
+		{
+			document.getElementById('weatherTitle').innerHTML = actualDay + ", " + actualMonth + " " + dayOfTheMonth + "th";
+		}
 		
 		if (h > 12)
 		{
@@ -90,7 +178,24 @@ body,td,th {
 <body onload="startTime()">
 
 <div class="rssfeed" id="rssfeed">RSS FEED</div>
-<div class="weather" id="weather">WEATHER</div>
+<div class="weather">
+	<div class="weatherTitle" id="weatherTitle">WEATHER</div>
+    <div class="weatherImages">
+    	<div id="firstImage"><font color="#FFAAAA" size="5">63</font><br><font color="#AAAAFF" size="5">40</font></div>
+        <div id="secondImage"><font color="#FFAAAA"><br><br>60</font><br><font color="#AAAAFF">36</font></div>
+        <div id="thirdImage"><font color="#FFAAAA"><br><br>63</font><br><font color="#AAAAFF">41</font></div>
+        <div id="fourthImage"><font color="#FFAAAA"><br><br>74</font><br><font color="#AAAAFF">53</font></div>
+        <div id="fifthImage"><font color="#FFAAAA"><br><br>77</font><br><font color="#AAAAFF">55</font></div>
+    <!--
+  		<img src="placeholder.png" width="120px" height="120px">
+    	<img src="placeholder.png" width="80px" height="80px">
+   		<img src="placeholder.png" width="80px" height="80px">
+    	<img src="placeholder.png" width="80px" height="80px">
+    	<img src="placeholder.png" width="80px" height="80px">
+    -->
+    </div>
+    <div class="weatherCurrentTemp" id="weatherCurrentTemp">42&#176;F</div>
+</div>
 <div class="time" id="time">TIME</div>
 <div class="greeting" id="greeting">GREETING</div>
 <div class="music">Maybe a music player</div>
