@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	font-family: Sk-Modernist-Bold;
+	src: url('Sk-Modernist-Bold.otf');	
+}
+
+div.weather 
+{
+	font-family: Sk-Modernist-Bold;
+	position: absolute;
+	top: 5%;
+	right: 5%;	
+}
+
+div.rssfeed
+{
+	font-family: Sk-Modernist-Bold;
+	position: absolute;
+	top: 5%;
+	left: 5%;	
+}
+
+div.time
+{
+	font-family: Sk-Modernist-Bold;
+	position: absolute;
+	top: 65%;
+	width: 100%;
+	text-align: center;
+	font-size: 80px;
+}
+
+div.greeting
+{
+	font-family: Sk-Modernist-Bold;
+	position: absolute;
+	top: 82%;
+	width: 100%;
+	text-align: center;
+	font-size: 25px;	
+}
+
+div.music
+{
+	font-family: Sk-Modernist-Bold;
+	position: absolute;
+	top: 97%;
+	width: 100%;
+	text-align: center;	
+}
