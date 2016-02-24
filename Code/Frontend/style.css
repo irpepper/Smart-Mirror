@@ -25,6 +25,7 @@ div.rssfeed
 div.time
 {
 	font-family: Sk-Modernist-Bold;
+	text-shadow: 10px 10px 24px #000000;
 	position: absolute;
 	top: 65%;
 	width: 100%;
@@ -35,6 +36,7 @@ div.time
 div.greeting
 {
 	font-family: Sk-Modernist-Bold;
+	text-shadow: 10px 10px 24px #000000;
 	position: absolute;
 	top: 82%;
 	width: 100%;
