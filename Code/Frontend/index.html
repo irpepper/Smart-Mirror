@@ -18,10 +18,24 @@ body,td,th {
 </style>
 <link href="style.css" rel="stylesheet" type="text/css">
 <script>
+
+	<!-- START SECTION TO PARSE XML -->
+	var userPref = new XMLHttpRequest();
+	
+	userPref.open("GET", "config.xml", true);
+	userPref.send();
+	
+	<!-- This needs to be run on a webserver to work -->
+	var xmlDoc = userPref.responseXML;
+	<!-- var user = xmlDoc.getElementsByTagName("username")[0].childNodes[0].nodeValue; -->
+	
+	<!-- END PARSE XML SECTION -->
+	
+	var user = "Alan";
+	console.log(user);
 	function startTime()
 	{
 		var today = new Date();
-		var user = "Alan";
 		var h = today.getHours();
 		var m = today.getMinutes();
 		m = checkTime(m);
