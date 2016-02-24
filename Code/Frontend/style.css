@@ -9,6 +9,7 @@
 div.weather 
 {
 	font-family: Sk-Modernist-Bold;
+	text-shadow: 2px 2px 10px #AAAAAA;
 	position: absolute;
 	top: 5%;
 	right: 5%;	
@@ -17,6 +18,7 @@ div.weather
 div.rssfeed
 {
 	font-family: Sk-Modernist-Bold;
+	text-shadow: 2px 2px 10px #AAAAAA;
 	position: absolute;
 	top: 5%;
 	left: 5%;	
