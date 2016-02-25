@@ -6,6 +6,23 @@
 	src: url('Sk-Modernist-Bold.otf');	
 }
 
+body 
+{
+	background-image: url(test_background.jpg);
+	background-color: #000000;
+	background-repeat:no-repeat;
+	background-size:auto;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;	
+}
+
+body, td, th
+{
+	color: #FFFFFF;
+}
+
 div.weather 
 {
 	font-family: Sk-Modernist-Bold;
