@@ -1,9 +1,30 @@
 @charset "utf-8";
 /* CSS Document */
 
+@-webkit-keyframes fadeIn { from {opacity:0;} to {opacity:1;}}
+@-moz-keyframes fadeIn { from {opacity:0;} to {opacity:1;}}
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;}}
+
 @font-face {
 	font-family: Sk-Modernist-Bold;
 	src: url('Sk-Modernist-Bold.otf');	
+}
+
+body 
+{
+	background-image: url(test_background.jpg);
+	background-color: #000000;
+	background-repeat:no-repeat;
+	background-size:auto;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+body, td, th
+{
+	color: #FFFFFF;
 }
 
 div.weather 
@@ -18,6 +39,23 @@ div.weather
 	width: 500px;
 	background-color: rgba(33,33,33,.50);
 	border-radius: 10px;
+	
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 0.7s;
+	-moz-animation-delay: 0.7s;
+	animation-delay: 0.7s;
 }
 
 div.weatherTitle
@@ -63,6 +101,24 @@ div.weatherImages #firstImage
 	left: 5%;
 	text-align: right;
 	text-shadow: 2px 2px 10px #333333;
+	
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 1.7s;
+	-moz-animation-delay: 1.7s;
+	animation-delay: 1.7s;
+	
 }
 
 div.weatherImages #secondImage
@@ -76,6 +132,23 @@ div.weatherImages #secondImage
 	top: 35px;
 	text-align: right;
 	text-shadow: 2px 2px 10px #333333;
+	
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 2.2s;
+	-moz-animation-delay: 2.2s;
+	animation-delay: 2.2s;
 }
 
 div.weatherImages #thirdImage
@@ -89,6 +162,23 @@ div.weatherImages #thirdImage
 	top: 35px;
 	text-align: right;
 	text-shadow: 2px 2px 10px #333333;
+	
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 2.7s;
+	-moz-animation-delay: 2.7s;
+	animation-delay: 2.7s;
 }
 
 div.weatherImages #fourthImage
@@ -102,6 +192,23 @@ div.weatherImages #fourthImage
 	top: 35px;
 	text-align: right;
 	text-shadow: 2px 2px 10px #333333;
+	
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 3.2s;
+	-moz-animation-delay: 3.2s;
+	animation-delay: 3.2s;
 }
 
 div.weatherImages #fifthImage
@@ -115,6 +222,23 @@ div.weatherImages #fifthImage
 	top: 35px;
 	text-align: right;
 	text-shadow: 2px 2px 10px #333333;
+	
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 3.7s;
+	-moz-animation-delay: 3.7s;
+	animation-delay: 3.7s;
 }
 
 div.rssfeed
@@ -128,6 +252,23 @@ div.rssfeed
 	width: 30%;
 	background-color: rgba(33,33,33,.50);
 	border-radius: 10px;
+	
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 0.7s;
+	-moz-animation-delay: 0.7s;
+	animation-delay: 0.7s;
 }
 
 div.time
@@ -139,6 +280,23 @@ div.time
 	width: 100%;
 	text-align: center;
 	font-size: 80px;
+	
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 0.7s;
+	-moz-animation-delay: 0.7s;
+	animation-delay: 0.7s;
 }
 
 div.greeting
@@ -150,6 +308,23 @@ div.greeting
 	width: 100%;
 	text-align: center;
 	font-size: 25px;	
+	
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 3.7s;
+	-moz-animation-delay: 3.7s;
+	animation-delay: 3.7s;
 }
 
 div.music
@@ -160,4 +335,21 @@ div.music
 	width: 100%;
 	text-align: center;	
 	background-color: rgba(33,33,33,.50);
+	
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 0.7s;
+	-moz-animation-delay: 0.7s;
+	animation-delay: 0.7s;
 }
