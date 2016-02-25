@@ -70,7 +70,7 @@ div.weatherImages #secondImage
 	width: 80px;
 	height: 80px;
 	background-image: url(placeholder.png);
-	background-size: 80px 80px;
+	background-size: 145px 100px;
 	position: absolute;
 	left: 30%;
 	top: 35px;
@@ -83,7 +83,7 @@ div.weatherImages #thirdImage
 	width: 80px;
 	height: 80px;
 	background-image: url(placeholder.png);
-	background-size: 80px 80px;
+	background-size: 145px 100px;
 	position: absolute;
 	left: 48%;
 	top: 35px;
@@ -96,7 +96,7 @@ div.weatherImages #fourthImage
 	width: 80px;
 	height: 80px;
 	background-image: url(placeholder.png);
-	background-size: 80px 80px;
+	background-size: 145px 100px;
 	position: absolute;
 	left: 65%;
 	top: 35px;
@@ -109,7 +109,7 @@ div.weatherImages #fifthImage
 	width: 80px;
 	height: 80px;
 	background-image: url(placeholder.png);
-	background-size: 80px 80px;
+	background-size: 145px 100px;
 	position: absolute;
 	left: 82%;
 	top: 35px;

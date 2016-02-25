@@ -19,8 +19,50 @@ body,td,th {
 }
 </style>
 <link href="style.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" charset="utf-8"></script>
+<script src="jquery.simpleWeather.js" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	$.simpleWeather({
+		location:'keller, texas',
+		unit: 'f',
+		success:function(weather){
+			var currentTemp = weather.temp + '&deg;' + weather.units.temp;
+			$("#weatherCurrentTemp").html(currentTemp);
+			
+			var weather0 = '<font color="#FFAAAA" size="5">' + weather.forecast[0].high + '</font><br><font color="#AAAAFF" size="5">' + weather.forecast[0].low +'</font>';
+			var weather1 = '<font color="#FFAAAA"><br><br>' + weather.forecast[1].high + '</font><br><font color="#AAAAFF">' + weather.forecast[1].low +'</font>';
+			var weather2 = '<font color="#FFAAAA"><br><br>' + weather.forecast[2].high + '</font><br><font color="#AAAAFF">' + weather.forecast[2].low +'</font>';
+			var weather3 = '<font color="#FFAAAA"><br><br>' + weather.forecast[3].high + '</font><br><font color="#AAAAFF">' + weather.forecast[3].low +'</font>';
+			var weather4 = '<font color="#FFAAAA"><br><br>' + weather.forecast[4].high + '</font><br><font color="#AAAAFF">' + weather.forecast[4].low +'</font>';
+			
+			$("#firstImage").html(weather0);
+			$("#secondImage").html(weather1);
+			$("#thirdImage").html(weather2);
+			$("#fourthImage").html(weather3);
+			$("#fifthImage").html(weather4);
+			
+			var weatherImage0 = "url('" + weather.image + "')";
+			var weatherImage1 = "url('" + weather.forecast[1].image + "')";
+			var weatherImage2 = "url('" + weather.forecast[2].image + "')";
+			var weatherImage3 = "url('" + weather.forecast[3].image + "')";
+			var weatherImage4 = "url('" + weather.forecast[4].image + "')";
+			
+			document.getElementById("firstImage").style.backgroundImage = weatherImage0;
+			document.getElementById("secondImage").style.backgroundImage = weatherImage1;
+			document.getElementById("thirdImage").style.backgroundImage = weatherImage2;
+			document.getElementById("fourthImage").style.backgroundImage = weatherImage3;
+			document.getElementById("fifthImage").style.backgroundImage = weatherImage4;
+			
+			console.log('Weather: Passed!');
+		},
+		error:function(error){
+			console.log("Weather: Bad things happened...");
+		}		
+	});
+</script>
 <script>
-
+	<!-- Time Stuff -->
 	<!-- START SECTION TO PARSE XML -->
 	var userPref = new XMLHttpRequest();
 	
@@ -181,11 +223,11 @@ body,td,th {
 <div class="weather">
 	<div class="weatherTitle" id="weatherTitle">WEATHER</div>
     <div class="weatherImages">
-    	<div id="firstImage"><font color="#FFAAAA" size="5">63</font><br><font color="#AAAAFF" size="5">40</font></div>
-        <div id="secondImage"><font color="#FFAAAA"><br><br>60</font><br><font color="#AAAAFF">36</font></div>
-        <div id="thirdImage"><font color="#FFAAAA"><br><br>63</font><br><font color="#AAAAFF">41</font></div>
-        <div id="fourthImage"><font color="#FFAAAA"><br><br>74</font><br><font color="#AAAAFF">53</font></div>
-        <div id="fifthImage"><font color="#FFAAAA"><br><br>77</font><br><font color="#AAAAFF">55</font></div>
+    	<div id="firstImage"><font color="#FFAAAA" size="5">00</font><br><font color="#AAAAFF" size="5">00</font></div>
+        <div id="secondImage"><font color="#FFAAAA"><br><br>00</font><br><font color="#AAAAFF">00</font></div>
+        <div id="thirdImage"><font color="#FFAAAA"><br><br>00</font><br><font color="#AAAAFF">00</font></div>
+        <div id="fourthImage"><font color="#FFAAAA"><br><br>00</font><br><font color="#AAAAFF">00</font></div>
+        <div id="fifthImage"><font color="#FFAAAA"><br><br>00</font><br><font color="#AAAAFF">00</font></div>
     <!--
   		<img src="placeholder.png" width="120px" height="120px">
     	<img src="placeholder.png" width="80px" height="80px">
@@ -194,7 +236,7 @@ body,td,th {
     	<img src="placeholder.png" width="80px" height="80px">
     -->
     </div>
-    <div class="weatherCurrentTemp" id="weatherCurrentTemp">42&#176;F</div>
+    <div class="weatherCurrentTemp" id="weatherCurrentTemp">000F</div>
 </div>
 <div class="time" id="time">TIME</div>
 <div class="greeting" id="greeting">GREETING</div>
