@@ -1,19 +1,7 @@
 // JavaScript Document
 	//<!-- Time Stuff -->
 	//<!-- START SECTION TO PARSE XML -->
-	var userPref = new XMLHttpRequest();
-	
-	userPref.open("GET", "config.xml", true);
-	userPref.send();
-	
-	//<!-- This needs to be run on a webserver to work -->
-	var xmlDoc = userPref.responseXML;
-	//<!-- var user = xmlDoc.getElementsByTagName("username")[0].childNodes[0].nodeValue; -->
-	
-	//<!-- END PARSE XML SECTION -->
-	
 	var user = "Alan";
-	console.log(user);
 	function startTime()
 	{
 		"use strict";
@@ -112,35 +100,13 @@
 		{
 			document.getElementById('time').innerHTML = (h - 12) + ":" + m + " PM";
 			
-			if ( h > 17)
-			{
-				document.getElementById('greeting').innerHTML = "Good Evening, " + user;
-			}
-			else
-			{
-				document.getElementById('greeting').innerHTML = "Good Afternoon, " + user;
-			}
+			
 		}
 		else
 		{
 			document.getElementById('time').innerHTML = h + ":" + m + " AM";
 			
-			if ( h > 7)
-			{
-				document.getElementById('greeting').innerHTML = "Good Morning, " + user;
-			}
-			else if (h > 4)
-			{
-				document.getElementById('greeting').innerHTML = "Early start, " + user + "?";
-			}
-			else if (h < 3)
-			{
-				document.getElementById('greeting').innerHTML = "Burning the midnight oil, " + user + "?";
-			}
-			else
-			{
-				document.getElementById('greeting').innerHTML = "Why are you still awake, " + user + "?";	
-			}
+			
 		}
 		var t = setTimeout(startTime, 500);
 	}
