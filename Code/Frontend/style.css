@@ -1,9 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
+/* This code is ugly and I hate it */
 
 @-webkit-keyframes fadeIn { from {opacity:0;} to {opacity:1;}}
 @-moz-keyframes fadeIn { from {opacity:0;} to {opacity:1;}}
 @keyframes fadeIn { from {opacity:0;} to {opacity:1;}}
+
+@-webkit-keyframes dim { from {opacity:0;} to {opacity:0.5;}}
+@-moz-keyframes dim { from {opacity:0;} to {opacity:0.5;}}
+@keyframes dim { from {opacity:0;} to {opacity:0.5;}}
+
+@-webkit-keyframes bkgdim { from {opacity:0;} to {opacity:1;}}
+@-moz-keyframes bkgdim { from {opacity:0;} to {opacity:1;}}
+@keyframes bkgdim { from {opacity:0;} to {opacity:1;}}
 
 @font-face {
 	font-family: Sk-Modernist-Bold;
@@ -25,6 +34,68 @@ body
 body, td, th
 {
 	color: #FFFFFF;
+}
+
+div.dimmer
+{
+	cursor: none;
+	background-color: #000000;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right:0;
+	width: 100%;
+	height: 100%;
+	z-index: 1004;
+	
+	opacity: 0;
+	-webkit-animation: dim ease-in 1;
+	-moz-animation: dim ease-in 1;
+	animation: dim ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 300s;
+	-moz-animation-delay: 300s;
+	animation-delay: 300s;
+}
+
+div.dim2
+{
+	cursor: none;
+	background-color: #000000;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right:0;
+	width: 100%;
+	height: 100%;
+	z-index: 1002;
+	
+	opacity: 0;
+	-webkit-animation: bkgdim ease-in 1;
+	-moz-animation: bkgdim ease-in 1;
+	animation: bkgdim ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 150s;
+	-moz-animation-delay: 150s;
+	animation-delay: 150s;
 }
 
 div.weather 
@@ -280,6 +351,7 @@ div.time
 	width: 100%;
 	text-align: center;
 	font-size: 80px;
+	z-index: 1003;
 	
 	opacity: 0;
 	-webkit-animation: fadeIn ease-in 1;
