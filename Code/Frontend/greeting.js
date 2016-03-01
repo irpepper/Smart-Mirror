@@ -34,7 +34,7 @@ function greetings()
 	var today = new Date();
 	var h = today.getHours();
 	
-	if (h > 17)
+	if (h > 11)
 	{
 		if ( h > 17)
 		{
