@@ -1,31 +1,16 @@
 var user = "USER";
 
-function loadXMLDoc()
-{
-	"use strict";
-	console.log("Is this doing anything?");
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-        getName(xhttp);
-    	}
-	};
-	xhttp.open("GET", "config.xml", true);
-	xhttp.send();
+function getCookie(name) {
+	var cname = name + "=";
+	var ca = document.cookie.split(';');
 	
-	greetings();
-}
-
-function getName(xml)
-{
-	//var i;
-	"use strict";
-	console.log("Running");
-	var xmlDoc = xml.responseXML;
-	var x = xmlDoc.getElementsByTagName('username')[0];
-	var y = x.childNodes[0];
-	user = y.nodeValue;
-	console.log("USERNAME: " + user);
+	for (var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1);
+		if (c.indexOf(cname) == 0) return c.substring(cname.length, c.length);
+	}
+	
+	return "";
 }
 
 function greetings()
@@ -33,6 +18,8 @@ function greetings()
 	"use strict";
 	var today = new Date();
 	var h = today.getHours();
+	
+	user = getCookie("username");
 	
 	if (h > 11)
 	{

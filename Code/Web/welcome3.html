@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hello</title>
+<link href="style_backend.css" rel="stylesheet" type="text/css">
+<script src="cookies.js" charset="utf-8"></script>
+</head>
+
+<body>
+<div class="yourName" id="yourName"><h1>what city and state are you in?</h1></div>
+<div class="nameForm" id="nameForm"><input id="location" type="text" name="location"></div>
+<div class="continue2" id="continue2"><a href="index.html" onclick="setCookie('location', document.getElementById('location').value, '365');setCookie('firstrun', '0', '365')">continue ></a></div>
+</body>
+</html>

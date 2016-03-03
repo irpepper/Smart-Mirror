@@ -1,6 +1,38 @@
 // JavaScript Document
+var loc = 'NULL';
+
+$(document).ready(function() {
+	
+	getInfo();
+	getWeather();
+	
+});
+
+function getCookie(name) {
+	var cname = name + "=";
+	var ca = document.cookie.split(';');
+	
+	for (var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1);
+		if (c.indexOf(cname) == 0) return c.substring(cname.length, c.length);
+	}
+	
+	return "";
+}
+
+function getInfo() {
+	console.log("Trying to get info");
+	loc = getCookie("location");
+	console.log(loc);
+}
+
+function getWeather()
+{
+	setInterval(getWeather, 50000);
+
 $.simpleWeather({
-		location:'keller, texas',
+		location:loc,
 		unit: 'f',
 		success:function(weather){
 			"use strict";
@@ -30,11 +62,13 @@ $.simpleWeather({
 			document.getElementById("thirdImage").style.backgroundImage = weatherImage2;
 			document.getElementById("fourthImage").style.backgroundImage = weatherImage3;
 			document.getElementById("fifthImage").style.backgroundImage = weatherImage4;
+			$("#weatherLocation").html(loc);
 			
-			console.log('Weather: Passed!');
+			console.log('Weather: Updated!');
 		},
 		error:function(error){
 			"use strict";
 			console.log("Weather: Bad things happened...");
 		}		
 	});
+}
