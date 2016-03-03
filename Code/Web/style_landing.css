@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+body
+{
+	background-color: #261815;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+div.logo
+{
+	width: 100%;
+	position: absolute;
+	top: 35%;
+	text-align: center;
+}

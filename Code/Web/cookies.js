@@ -24,11 +24,15 @@ function checkCookie() {
 	console.log(firstRun);
 	if (firstRun != "")
 	{
+		setTimeout(function(){
 		window.location = "smartmirror.html";
+		},5000);
 	}
 	else
 	{
+		setTimeout(function(){
 		window.location = "welcome.html";
+		},5000);
 	}
 }
 
