@@ -203,6 +203,8 @@ function checkCookie() {
 import os
 os.startfile(path to motionsensor)
 os.startfile(path to lightsensor)
+os.startfile(path to xampp)
+os.startfile(path to chromium, with flags to open to pudding)
 
 2.2 - MotionSensor.py
 =========================================
