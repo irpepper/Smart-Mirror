@@ -40,3 +40,12 @@
 	- kweb -KJEHCUA+-zbhrqfpoklgtjneduwxy http://localhost
 	- This disables just about everything that isn't kweb. Use ctrl-alt-F1 to get to terminal
 	- Use ctrl-alt-f7 to get back to X
+* Install fbi
+	- sudo apt-get install fbi
+	- chmod 0777 /etc
+	- chmod 0777 /etc/init.d
+* FTP asplashscreen to /etc/init.d
+	- sudo chmod a+x /etc/init.d/asplashscreen
+	- sudo insserv /etc/init.d/asplashscreen
+	- sudo reboot
+	- NOTE: This file should only be edited in NANO because formatting issues kill it.
