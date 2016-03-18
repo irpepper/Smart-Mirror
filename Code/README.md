@@ -49,3 +49,8 @@
 	- sudo insserv /etc/init.d/asplashscreen
 	- sudo reboot
 	- NOTE: This file should only be edited in NANO because formatting issues kill it.
+* Phone keyboard / mouse support
+	- Download RemotePi from Apple or Google app store
+	- sudo wget http://remotepi.io/drivers/remotepi_1.0.15_armhf.deb
+	- sudo dpkg -i remotepi_1.0.15_armhf.deb
+	- sudo /etc/init.d/remotepi start
