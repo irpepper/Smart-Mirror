@@ -1,0 +1,229 @@
+PseudoCode
+=========================================
+
+1.0 - JAVASCRIPT
+=========================================
+
+1.1 - Time.js
+=========================================
+user = temp;
+function startTime()
+{
+	today = new Date();
+	h = today.getHours();
+	m = today.getMinutes();
+	dayoftheweek = today.getDay();
+	dayofthemonth = today.getDate();
+	thisMonth = today.getMonth();
+	
+	var actualday, actualmonth;
+	m = checkTime(m);
+	
+	// We need to convert the dayoftheweek and dayofthemonth to
+	// a human readable format
+	
+	switch (dayoftheweek)
+	{
+		case 0:
+			actualDay = "sunday";
+			break;
+		case 1:
+			actualDay = "monday";
+			break;
+		//etc., etc., etc.
+	}
+	
+	switch (thismonth)
+	{
+		case 0:
+			actualmonth = "january";
+			break;
+		case 1:
+			actualmonth = "february";
+			break;
+		// etc., etc., etc.
+	}
+	
+	if (h > 12)
+	{
+		// set time element to h - 12 (getHours() returns a 24 hour time)
+	}
+	else
+	{
+		// set time element to h
+		// this code goes something like document.getElementById('time').innerHTML = h;
+	}
+}
+
+function checkTime(i)
+{
+	// This ensures that there's always a leading 0 before single digit times
+	if (i < 10)
+	{
+		i = "0" + i;
+	}
+	return i;
+}
+
+
+1.2 - Weather.js
+=========================================
+var loc = temp;
+$(document).ready(function() {
+	getInfo();
+	getWeather();
+});
+
+function getCookie(name) {
+	cookiename = name + "=";
+	ca = document.cookie.split(;);
+	
+	// copy string over character by character and return, else return blank.
+}
+
+function getInfo() {
+	loc = getCookie("location");
+}
+
+function getWeather()
+{
+	setInterval(getWeather, 50000); //this is so we get the updated weather every 5 minutes or so.
+	
+	//The next is all straight from the simpleWeather.js API
+	$.simpleWeather({
+		location:loc,
+		unit:'f',
+		success:function(weather){
+			currentTemp = weather.temp
+			weather0 = weather.forecast[0];
+			weather1 = weather.forecast[1];
+			weather2 = weather.forecast[2];
+			weather3 = weather.forecast[3];
+			weather4 = weather.forecast[4];
+			
+			// push all values to HTML page (getelementById.innerHTML)
+		},
+		error:function(error){
+			// Error
+		}
+	});
+}
+
+
+1.3 - Greeting.js
+=========================================
+var user = temp;
+
+function getCookie(name) {
+	cookiename = name + "=";
+	ca = document.cookie.split(;);
+	
+	// copy string over character by character and return, else return blank.
+}
+
+function greetings()
+{
+	today = new Date();
+	h = today.getHours;
+	
+	user = getCookie("username");
+	
+	// Return a different greeting based on the time. For instance,
+	if (h > 17)
+	{
+		document.getElementById('greeting').innerHTML = "good evening, " + user;
+	}
+	
+	// etc., etc., etc.
+}
+
+
+1.4 - RSS.js
+=========================================
+var feed[5] = temp;
+// etc. for the total number of feeds
+
+function getCookie(name) {
+	cookiename = name + "=";
+	ca = document.cookie.split(;);
+	
+	// copy string over character by character and return, else return blank.
+}
+
+function getFeeds()
+{
+	var numberofFeeds = 5;
+	for (i = 0; i < numberofFeeds, i ++)
+	{
+		getCookie(name[i]);
+		
+		// We're using the Google Feed API here (google.load)
+		feed[i].load(function (data) {
+			//using DOM injection (like every other function), push data to appropriate DIV tag in the main page.
+		})
+	}
+	
+}
+
+
+1.5 - Cookies.js
+=========================================
+function setCookie(name, value, expirationDays)
+{
+	d = new Date();
+	d.setTime(d.getTime + (expirationDays in milliseconds));
+	expires = "expires=" + d.toUTCString();
+	document.cookie = name + "=" + value + ";" + expires "; path=/";
+}
+
+function getCookie(name) {
+	cookiename = name + "=";
+	ca = document.cookie.split(;);
+	
+	// copy string over character by character and return, else return blank.
+}
+
+function checkCookie() {
+	// All this does is verify there is something stored in cookies. Otherwise, send to the setup page.
+	if (document.cookies == NULL)
+	{
+		window.location = setup page
+	}
+	else
+	{
+		window.location = main page
+	}
+}
+
+2.0 - PYTHON
+=========================================
+
+2.1 - Boot.py
+=========================================
+import os
+os.startfile(path to motionsensor)
+os.startfile(path to lightsensor)
+os.startfile(path to xampp)
+os.startfile(path to chromium, with flags to open to pudding)
+
+2.2 - MotionSensor.py
+=========================================
+// We're using PyAutoGUI for this
+import pyautogui
+
+while(1)	//sit and listen
+{
+	if (motion from sensor passes a certain threshold)
+	pyautogui.moveRel(0,1)	// move mouse 1 pixel down, which is enough to keep screen from going into screensaver mode
+}
+
+2.3 - LightSensor.py
+=========================================
+// Simple and light here, if the light goes below a certain threshold, activate nightlight
+while(1) 		// sit and listen
+{
+	if (light goes below certain level)
+	{
+		turn on nightlight
+	}
+}
