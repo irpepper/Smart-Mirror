@@ -54,3 +54,7 @@
 	- sudo wget http://remotepi.io/drivers/remotepi_1.0.15_armhf.deb
 	- sudo dpkg -i remotepi_1.0.15_armhf.deb
 	- sudo /etc/init.d/remotepi start
+* Switching to Midori (again)
+	- Install matchbox
+	- Change .xsession to matchbox-window-manager & midori -e Fullscreen -a http://localhost
+	- This works in profile! Yay!
