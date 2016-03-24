@@ -1,0 +1,41 @@
+Midterm Presentation:
+
+Functional Requirements:
+  
+Non-Functional Requirements:
+
+Unusual Constraints:
+  Raspberry Pi doesn't have an internal clock, so we have to manually set the clock every power cycle.
+
+Class Diagram:
+
+Challenges in implementing design:
+  Different hardware versions
+  Outdated libraries
+  Finding a browser that supports all needed features
+  Creating a first time run script that installs all needed components
+
+Client Relationship:
+  Hes terrible yet also great
+
+Major Challenges:
+  Working around clock reset
+  First time network configuration
+  Sensor integration
+  Discovering monitor resolution  ~an ongoing struggle
+  Finding a mirrored film with correct properties
+  
+Lessons Learned:
+  Use properly sized memory device the first time
+  Measure twice, cut once
+  
+Unsolved Problems:
+  Pandora integration
+  Dynamic animated background
+  Screen control via light sensor/motion sensor
+
+Will you finish on time? 
+  Yes
+  
+Have we altered the scope?
+  A music player was initially included, and probably will not make it to V1.0
