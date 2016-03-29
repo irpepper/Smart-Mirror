@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Config.</title>
+		<script src="cookies.js" charset="utf-8"></script>
+	</head>
+	
+	<body>
+		What is your name?<br>
+		<input id="name" type="text" name="name"><br>
+		Where are you located? (city, state)<br>
+		<input id="location" type="text" name="location"><br>
+		Gimme some RSS goodness<br>
+		<input id="RSS1" type="text" name="RSS1"><br>
+		<input id="RSS2" type="text" name="RSS2"><br>
+		<input id="RSS3" type="text" name="RSS3"><br>
+		<input id="RSS4" type="text" name="RSS4"><br>
+		<input id="RSS5" type="text" name="RSS5"><br>
+		<a href="smartmirror.html" onclick="setCookie('username', document.getElementById('name').value, '365');setCookie('location', document.getElementById('location').value, '365')">save changes ></a>
+	</body>
+</html>
