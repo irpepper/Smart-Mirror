@@ -12,9 +12,10 @@ $(document).ready(function() {
 		}
 		else{
 			var entries = result.feed.entries
-			for(var i = 0; i < entries.length; i++){
+			for(var i = 0; i < 5; i++){
 				var entry = entries[i]
 				console.log(entry.title)
+				document.getElementById('ticker').innerHTML += '<div class="ticker__item"> ~ ' + entry.title + ' ~ </div>';
 			}
 		}
 	})

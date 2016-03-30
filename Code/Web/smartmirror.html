@@ -5,13 +5,7 @@
 <title>Stuff.</title>
 <link href="style_frontend.css" rel="stylesheet" type="text/css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" charset="utf-8"></script>
-<!-- RSS Stuff -->
-<!-- https://developers.google.com/feed/v1/devguide -->
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
-	google.load("feeds", "1");
-</script>
-<!-- End RSS Stuff -->
+
 <script type="text/javascript" src="xmlread.js" charset="utf-8"></script>
 <script src="jquery.simpleWeather.js" charset="utf-8"></script>
 <script type="text/javascript" src="weather.js" charset="utf-8"></script>
@@ -25,7 +19,7 @@
 <div class="dimmer"></div>
 <div class="time" id="time">TIME</div>
 <div class="dim2"></div>
-<div class="rssfeed" id="rssfeed">RSS FEED</div>
+<!--<div class="rssfeed" id="rssfeed">RSS FEED</div>-->
 <div class="weather">
 	<div class="weatherTitle" id="weatherTitle">WEATHER</div>
     <div class="weatherImages">
@@ -40,7 +34,13 @@
 </div>
 
 <div class="greeting" id="greeting">GREETINGS, HUMAN</div>
-<div class="music">Maybe a music player</div>
+<!-- <div class="music">Maybe a music player</div> -->
+
+<div class = "ticker-wrap">
+	<div class = "ticker" id="ticker">
+		<div class="ticker__item">Pudding News:</div>
+	</div>
+</div>
 
 <div class="tempUsername" id="tempUsername">temp</div>
 <div class="tempLocation" id="tempLocation">denton, texas</div>

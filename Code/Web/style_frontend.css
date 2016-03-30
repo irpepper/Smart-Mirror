@@ -14,6 +14,17 @@
 @-moz-keyframes bkgdim { from {opacity:0;} to {opacity:1;}}
 @keyframes bkgdim { from {opacity:0;} to {opacity:1;}}
 
+@keyframes ticker {
+	0% {
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+	100% {
+		-webkit-transform: translate3d(-100%,0,0);
+		transform: translate3d(-100%,0,0);
+	}
+}
+
 @font-face {
 	font-family: Sk-Modernist-Bold;
 	src: url('Sk-Modernist-Bold.otf');	
@@ -29,6 +40,7 @@ body
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
+	overflow: hidden;
 }
 
 body, td, th
@@ -423,6 +435,59 @@ div.music
 	-webkit-animation-delay: 0.7s;
 	-moz-animation-delay: 0.7s;
 	animation-delay: 0.7s;
+}
+
+.ticker-wrap {
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 0.7s;
+	-moz-animation-delay: 0.7s;
+	animation-delay: 0.7s;
+	
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    overflow: hidden;
+    height: 4rem;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding-left: 100%; 
+}
+
+.ticker {
+	-webkit-animation: ticker linear infinite;
+	-moz-animation: ticker linear infinite;
+	animation: ticker linear infinite;
+	
+	-webkit-animation-duration: 90s;
+	-moz-animation-duration: 90s;
+	animation-duration: 90s;
+
+    display: inline-block;
+    height: 4rem;
+    line-height: 4rem;
+    white-space: nowrap;
+    padding-right: 100%; // taken from container as display inline-block
+	overflow:hidden;
+}
+
+.ticker__item {
+	font-family: Sk-Modernist-Bold;
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 2rem;
+    color: white;
+	overflow: hidden;
 }
 
 div.tempUsername
