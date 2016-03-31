@@ -29,7 +29,7 @@ function getInfo() {
 
 function getWeather()
 {
-	setInterval(getWeather, 50000);
+	setInterval(getWeather, 300000);
 
 $.simpleWeather({
 		location:loc,
@@ -38,6 +38,7 @@ $.simpleWeather({
 			"use strict";
 			var currentTemp = weather.temp + '&deg;' + weather.units.temp;
 			var code = weather.code;
+			console.log("Weather code: " + code);
 			$("#weatherCurrentTemp").html(currentTemp);
 			
 			var weather0 = '<font color="#FFAAAA" size="5">' + weather.forecast[0].high + '</font><br><font color="#AAAAFF" size="5">' + weather.forecast[0].low +'</font>';
