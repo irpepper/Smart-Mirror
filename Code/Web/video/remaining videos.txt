@@ -1,0 +1,10 @@
+Thunderstorm
+Sleet
+Rain
+Snow
+Partly Cloudy - Night
+Mostly Cloudy - Day
+Mostly Cloudy - Night
+Dust / Haze / Smoke
+Cold
+Basic
