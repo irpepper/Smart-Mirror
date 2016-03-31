@@ -10,7 +10,7 @@ function getCookie(name) {
 		if (c.indexOf(cname) == 0) return c.substring(cname.length, c.length);
 	}
 	
-	return "";
+	return "USER";
 }
 
 function greetings()

@@ -169,9 +169,10 @@ $.simpleWeather({
 				// Code not found, basic video.
 				console.log("Weather: Code not found - switching to basic video");
 				document.getElementById('background_vid').innerHTML = '<source src="video/base2_vid.mp4" type="video/mp4">';
+				
 			}
 			
-			
+			document.getElementById('error').innerHTML = '';
 			console.log('Weather: Updated!');
 		},
 		error:function(error){
@@ -180,6 +181,7 @@ $.simpleWeather({
 			console.log("Weather: Displaying basic video...");
 			console.log("Weather: " + error);
 			document.getElementById('background_vid').innerHTML = '<source src="video/base2_vid.mp4" type="video/mp4">';
+			document.getElementById('error').innerHTML = 'WEATHER ERROR: Cannot Update Weather Information - Check Internet Connection';
 		}		
 	});
 }

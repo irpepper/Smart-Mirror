@@ -33,6 +33,7 @@ function getRSS()
 		feednami.load(feeds[x],function(result){
 			if(result.error){
 				console.log(result.error)
+				document.getElementById('error').innerHTML = 'RSS ERROR: ' + result.error;
 			}
 			else{
 				document.getElementById('ticker').innerHTML += '<div class="ticker__item"><i>' + result.feed.meta.title + ' </i></div>';
@@ -42,6 +43,7 @@ function getRSS()
 					console.log(entry.title)
 					document.getElementById('ticker').innerHTML += '<div class="ticker__item"> ~ ' + entry.title + ' ~ </div>';
 				}
+				document.getElementById('error').innerHTML = '';
 				console.log("RSS: Updated RSS Feed!");
 			}
 		});
