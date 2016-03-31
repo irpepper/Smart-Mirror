@@ -71,24 +71,28 @@ $.simpleWeather({
 				//17 35 37 38 39 45 47
 				// thunderstorm video
 				console.log("Weather: Thunderstorm");
+				document.getElementById('background_vid').innerHTML = '<source src="video/thunderstorm_vid.mp4" type="video/mp4">';
 			}
 			else if (code == 5 || code == 6 || code == 7 || code == 8 || code == 10 || code == 18)
 			{
 				//18
 				// sleet video
 				console.log("Weather: Sleet");
+				document.getElementById('background_vid').innerHTML = '<source src="video/sleet_vid.mp4" type="video/mp4">';
 			}
 			else if (code == 9 || code == 11 || code == 12 || code == 40)
 			{
 				//40
 				// rain video
 				console.log("Weather: Rain");
+				document.getElementById('background_vid').innerHTML = '<source src="video/rain_vid.mp4" type="video/mp4">';
 			}
 			else if (code == 13 || code == 14 || code == 15 || code == 16 || code == 41 || code == 42 || code == 43 || code == 46)
 			{
 				//13 14 15 16 41(heavy) 42 43(heavy) 46
 				// snow video
 				console.log("Weather: Snow");
+				document.getElementById('background_vid').innerHTML = '<source src="video/snow_vid.mp4" type="video/mp4">';
 			}
 			else if (code == 30 || code == 44)
 			{
@@ -134,7 +138,7 @@ $.simpleWeather({
 				console.log("Weather: Clear Night");
 				document.getElementById('background_vid').innerHTML = '<source src="video/moon_vid.mp4" type="video/mp4">';
 			}
-			else if (code == 32 || code == 34 || code == 36)
+			else if (code == 32 || code == 34)
 			{
 				// Clear Day
 				//32 34 36(hot)
@@ -148,6 +152,12 @@ $.simpleWeather({
 				console.log("Weather: Cloudy / Foggy");
 				document.getElementById('background_vid').innerHTML = '<source src="video/cloudy_vid.mp4" type="video/mp4">';
 			}
+			else if (code = 36)
+			{
+				// Hot
+				// 36
+				console.log("Weather: Hot");
+			}
 			else if (code == 25)
 			{
 				// Cold
@@ -157,8 +167,8 @@ $.simpleWeather({
 			else
 			{
 				// Code not found, basic video.
-				console.log("Weather: Code not found: switching to basic video");
-				document.getElementById('background_vid').innerHTML = '<source src="video/moon_vid.mp4" type="video/mp4">';
+				console.log("Weather: Code not found - switching to basic video");
+				document.getElementById('background_vid').innerHTML = '<source src="video/base2_vid.mp4" type="video/mp4">';
 			}
 			
 			
@@ -168,7 +178,8 @@ $.simpleWeather({
 			"use strict";
 			console.log("Weather: Bad things happened...");
 			console.log("Weather: Displaying basic video...");
-			document.getElementById('background_vid').innerHTML = '<source src="video/sun_vid.mp4" type="video/mp4">';
+			console.log("Weather: " + error);
+			document.getElementById('background_vid').innerHTML = '<source src="video/base2_vid.mp4" type="video/mp4">';
 		}		
 	});
 }

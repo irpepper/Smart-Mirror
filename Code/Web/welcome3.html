@@ -8,8 +8,16 @@
 </head>
 
 <body>
-<div class="yourName" id="yourName"><h1>what city and state are you in?</h1></div>
-<div class="nameForm" id="nameForm"><input id="location" type="text" name="location"></div>
+<div class="yourName" id="yourName"><h1>what city and state are you in?<br>example: keller, texas</h1></div>
+<div class="nameForm" id="nameForm"><input id="location" list="locations" required>
+<datalist id="locations">
+<!-- this is a huge pain in the ass, we're implementing as few as possible -->
+	<option value="keller, texas">
+	<option value="denton, texas">
+	<option value="vancouver, british columbia">
+</datalist>
+
+</div>
 <div class="continue2" id="continue2"><a href="index.html" onclick="setCookie('location', document.getElementById('location').value, '365');setCookie('firstrun', '0', '365')">continue ></a></div>
 </body>
 </html>

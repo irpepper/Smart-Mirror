@@ -1,5 +1,5 @@
-var RSS1 = "RSS";
-var feed = "http://www.reddit.com/r/news/.rss";
+var NUM_OF_FEEDS = 3;
+var feeds = ["http://www.reddit.com/r/news/.rss", "http://www.reddit.com/r/gaming/.rss", "http://rss.cnn.com/rss/cnn_world.rss"]
 
 $(document).ready(function() {
 	//very basic, just making sure we're getting something...
@@ -26,22 +26,26 @@ function getRSS()
 	"use strict";
 	
 	console.log("RSS: Updating RSS");
-	document.getElementById('ticker').innerHTML = '<div class="ticker__item">Pudding News:</div>'
+	document.getElementById('ticker').innerHTML = '<div class="ticker__item"><b>Pudding News:</b></div>'
 	
-	feednami.load(feed,function(result){
-		if(result.error){
-			console.log(result.error)
-		}
-		else{
-			var entries = result.feed.entries
-			for(var i = 0; i < 5; i++){
-				var entry = entries[i]
-				console.log(entry.title)
-				document.getElementById('ticker').innerHTML += '<div class="ticker__item"> ~ ' + entry.title + ' ~ </div>';
+	for (var x = 0; x < NUM_OF_FEEDS; x++)
+	{
+		feednami.load(feeds[x],function(result){
+			if(result.error){
+				console.log(result.error)
 			}
-			console.log("RSS: Updated RSS Feed!");
-		}
-	});
+			else{
+				document.getElementById('ticker').innerHTML += '<div class="ticker__item"><i>' + result.feed.meta.title + ' </i></div>';
+				var entries = result.feed.entries
+				for(var i = 0; i < 5; i++){
+					var entry = entries[i]
+					console.log(entry.title)
+					document.getElementById('ticker').innerHTML += '<div class="ticker__item"> ~ ' + entry.title + ' ~ </div>';
+				}
+				console.log("RSS: Updated RSS Feed!");
+			}
+		});
+	}
 	
-	var t = setTimeout(getRSS, 300000);
+	var t = setTimeout(getRSS, 300000); // This should probably be equal to the time of the ticker animation in style_frontend.css
 }

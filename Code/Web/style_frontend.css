@@ -469,9 +469,9 @@ div.music
 	-moz-animation: ticker linear infinite;
 	animation: ticker linear infinite;
 	
-	-webkit-animation-duration: 90s;
-	-moz-animation-duration: 90s;
-	animation-duration: 90s;
+	-webkit-animation-duration: 180s;
+	-moz-animation-duration: 180s;
+	animation-duration: 180s;
 
     display: inline-block;
     height: 4rem;
