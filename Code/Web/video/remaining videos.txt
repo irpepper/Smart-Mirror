@@ -1,5 +1,17 @@
-Partly Cloudy - Night
-Mostly Cloudy - Day
-Mostly Cloudy - Night
 Dust / Haze / Smoke
+Windy
 Cold
+
+Cloudy
+Moon
+Partly Cloudy - Night
+Mostly Cloudy - Night
+Mostly Cloudy - Day
+Partly Cloudy - Day
+Rain
+*Sleet
+*Snow
+Sun
+Thunderstorm
+
+On rain, sleet, snow, and thunderstorm videos, they need to reset to the base image.

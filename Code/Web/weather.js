@@ -113,18 +113,21 @@ $.simpleWeather({
 				// partly cloudy night
 				//29
 				console.log("Weather: Partly Cloudy - Night");
+				document.getElementById('background_vid').innerHTML = '<source src="video/partlycloudy_night_vid.mp4" type="video/mp4">';
 			}
 			else if (code == 28)
 			{
 				// mostly cloudy
 				//28 (day) 27(night)
 				console.log("Weather: Mostly Cloudy");
+				document.getElementById('background_vid').innerHTML = '<source src="video/mostlycloudy_vid.mp4" type="video/mp4">';
 				
 			}
 			else if (code == 27)
 			{
 				// mostly cloudy night
 				console.log("Weather: Mostly Cloudy - Night");
+				document.getElementById('background_vid').innerHTML = '<source src="video/mostlycloudy_night_vid.mp4" type="video/mp4">';
 			}
 			else if (code == 19 || code == 21 || code == 22)
 			{
