@@ -32,7 +32,6 @@
 
 body 
 {
-	background-image: url(test_background.jpg);
 	background-color: #000000;
 	background-repeat:no-repeat;
 	background-size:auto;
@@ -96,6 +95,22 @@ div.dim2
 	z-index: 1002;
 	
 	opacity: 0;
+}
+
+div.config
+{
+	opacity: 0.2;
+}
+
+div.config:hover
+{
+	opacity: 0.8;
+}
+
+div.debug
+{
+	font-family: Sk-Modernist-Bold;
+	font-size: 20px;
 }
 
 div.weather 
@@ -351,6 +366,13 @@ div.rssfeed
 	-webkit-animation-delay: 0.7s;
 	-moz-animation-delay: 0.7s;
 	animation-delay: 0.7s;
+}
+
+div.back
+{
+	font-family: Sk-Modernist-Bold;
+	text-shadow: 10px 10px 24px #000000;
+	font-size: 40px;
 }
 
 div.time

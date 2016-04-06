@@ -21,6 +21,14 @@ function greetings()
 	
 	user = getCookie("username");
 	
+	if (user == "debug")
+	{
+		document.getElementById('greeting').innerHTML = "NOW ENTERING DEBUG MODE";
+		setTimeout(function(){
+		window.location = "debug.html";
+		},1000);
+	}
+	
 	if (h > 11)
 	{
 		if ( h > 17)

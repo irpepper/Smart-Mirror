@@ -49,5 +49,5 @@ function getRSS()
 		});
 	}
 	
-	var t = setTimeout(getRSS, 300000); // This should probably be equal to the time of the ticker animation in style_frontend.css
+	var t = setTimeout(getRSS, 180000); // This should probably be equal to the time of the ticker animation in style_frontend.css
 }

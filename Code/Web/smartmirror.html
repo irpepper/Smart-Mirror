@@ -3,23 +3,21 @@
 <head>
 <meta charset="utf-8">
 <title>Stuff.</title>
-<link href="style_frontend.css" rel="stylesheet" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" charset="utf-8"></script>
-
-<script type="text/javascript" src="xmlread.js" charset="utf-8"></script>
-<script src="jquery.simpleWeather.js" charset="utf-8"></script>
-<script type="text/javascript" src="weather.js" charset="utf-8"></script>
-<script src="https://storage.googleapis.com/feednami-static/js/feednami-client-v1.0.1.js"></script>
-<script type="text/javascript" src="rss.js" charset="utf-8"></script>
-<script src="timestuff.js" charset="utf-8"></script>
-<script src="greeting.js" charset="utf-8"></script>
+	<link href="style_frontend.css" rel="stylesheet" type="text/css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="xmlread.js" charset="utf-8"></script>
+	<script src="jquery.simpleWeather.js" charset="utf-8"></script>
+	<script type="text/javascript" src="weather.js" charset="utf-8"></script>
+	<script src="https://storage.googleapis.com/feednami-static/js/feednami-client-v1.0.1.js"></script>
+	<script type="text/javascript" src="rss.js" charset="utf-8"></script>
+	<script src="timestuff.js" charset="utf-8"></script>
+	<script src="greeting.js" charset="utf-8"></script>
 </head>
 
 <body onload="startTime(), greetings()">
 <div class="error" id="error"></div>
-<div class="dimmer"></div>
+<div class="config" id="config"><a href="welcome2.html"><img src="gear.png" height="50px" width="50px"></a></div>
 <div class="time" id="time">----</div>
-<div class="dim2"></div>
 <!--<div class="rssfeed" id="rssfeed">RSS FEED</div>-->
 <div class="weather">
 	<div class="weatherTitle" id="weatherTitle">WEATHER</div>

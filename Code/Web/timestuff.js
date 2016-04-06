@@ -102,11 +102,13 @@
 			
 			
 		}
+		else if (h == 0)
+		{
+			document.getElementById('time').innerHTML = "12:" + m + " AM";
+		}
 		else
 		{
 			document.getElementById('time').innerHTML = h + ":" + m + " AM";
-			
-			
 		}
 		var t = setTimeout(startTime, 500);
 	}

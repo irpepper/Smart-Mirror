@@ -1,5 +1,6 @@
 // JavaScript Document
 var loc = 'NULL';
+var defaultMode = false;
 
 $(document).ready(function() {
 	
@@ -25,6 +26,12 @@ function getInfo() {
 	console.log("Trying to get info");
 	loc = getCookie("location");
 	console.log(loc);
+	
+	if (loc == "USER")
+	{
+		loc = "Denton, Texas";
+		defaultMode = true;
+	}
 }
 
 function getWeather()
@@ -172,8 +179,17 @@ $.simpleWeather({
 				
 			}
 			
-			document.getElementById('error').innerHTML = '';
-			console.log('Weather: Updated!');
+			if (defaultMode == false)
+			{
+				document.getElementById('error').innerHTML = '';
+				console.log('Weather: Updated!');
+			}
+			else
+			{
+				document.getElementById('error').innerHTML = 'WEATHER ERROR: No Location Data Found, Defaulting To Denton, Texas. Please check configuration.';
+				console.log('Weather: Updated, but in default mode');
+			}
+			
 		},
 		error:function(error){
 			"use strict";
@@ -181,7 +197,7 @@ $.simpleWeather({
 			console.log("Weather: Displaying basic video...");
 			console.log("Weather: " + error);
 			document.getElementById('background_vid').innerHTML = '<source src="video/base2_vid.mp4" type="video/mp4">';
-			document.getElementById('error').innerHTML = 'WEATHER ERROR: Cannot Update Weather Information - Check Internet Connection';
+			document.getElementById('error').innerHTML = 'WEATHER ERROR: There was a problem retrieving the latest weather information.';
 		}		
 	});
 }
