@@ -1,14 +1,17 @@
 import RPI.GPIO as GPIO
-import pyautogui
+from pymouse import pymouse
+import time
 
 pirPin = 16
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(pirPin, GPIO.IN)
+m = PyMouse()
+res = m.screen_size()
 
-while 0:
 
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(pirPin, GPIO.IN)
+while True:
     value = GPIO.input(pirPin)
     if value = True:
-        pyautogui.move(0,1)
-        pyautogui.move(0,-1)
-        print "This shit works yo"
+        m.move(res-100,res)
+        m.move(res,res)
+    time.sleep(10)
