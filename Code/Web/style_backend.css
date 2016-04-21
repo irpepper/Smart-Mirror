@@ -20,6 +20,7 @@
 
 body {
 	background-color: #261815;
+	color: #FFFFFF;
 	margin-left: 0px;
 	margin-top: 0px;
 	margin-right: 0px;
@@ -75,7 +76,7 @@ div.welcome2 {
 	color: #FFFFFF;
 	font-family: "Sk-Modernist Bold";
 	text-align: left;
-	font-size: 30px;
+	font-size: 15px;
 	text-shadow: 2px 2px 10px #000000;
 	position: absolute;	
 	top:25%;
@@ -159,7 +160,7 @@ div.yourName {
 	color: #FFFFFF;
 	font-family: "Sk-Modernist Bold";
 	text-align: left;
-	font-size: 30px;
+	font-size: 15px;
 	text-shadow: 2px 2px 10px #000000;
 	position: absolute;	
 	top:25%;
@@ -188,7 +189,7 @@ input {
 	height: 30px;
 	position: absolute;
 	left: 25%;
-	top: 50%;
+	top: 40%;
 	font-family: "Sk-Modernist Bold";
 	font-size: 30px;
 	shadow: 2px 2px 10px #000000;
