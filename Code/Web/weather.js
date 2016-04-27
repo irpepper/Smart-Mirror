@@ -78,107 +78,111 @@ $.simpleWeather({
 				//17 35 37 38 39 45 47
 				// thunderstorm video
 				console.log("Weather: Thunderstorm");
-				document.getElementById('background_vid').innerHTML = '<source src="video/thunderstorm_vid.mp4" type="video/mp4">';
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/thunderstorm_vid.png">';
 			}
 			else if (code == 5 || code == 6 || code == 7 || code == 8 || code == 10 || code == 18)
 			{
 				//18
 				// sleet video
 				console.log("Weather: Sleet");
-				document.getElementById('background_vid').innerHTML = '<source src="video/sleet_vid.mp4" type="video/mp4">';
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/sleet_vid.png">';
 			}
 			else if (code == 9 || code == 11 || code == 12 || code == 40)
 			{
 				//40
 				// rain video
 				console.log("Weather: Rain");
-				document.getElementById('background_vid').innerHTML = '<source src="video/rain_vid.mp4" type="video/mp4">';
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/rain_vid.png">';
 			}
 			else if (code == 13 || code == 14 || code == 15 || code == 16 || code == 41 || code == 42 || code == 43 || code == 46)
 			{
 				//13 14 15 16 41(heavy) 42 43(heavy) 46
 				// snow video
 				console.log("Weather: Snow");
-				document.getElementById('background_vid').innerHTML = '<source src="video/snow_vid.mp4" type="video/mp4">';
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/snow_vid.png">';
 			}
 			else if (code == 30 || code == 44)
 			{
 				// partly cloudy
 				//30(day) 29(night) 44
 				console.log("Weather: Partly Cloudy");
-				document.getElementById('background_vid').innerHTML = '<source src="video/partlycloudy_vid.mp4" type="video/mp4">';
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/partlycloudy_vid.png">';
 			}
 			else if (code == 29)
 			{
 				// partly cloudy night
 				//29
 				console.log("Weather: Partly Cloudy - Night");
-				document.getElementById('background_vid').innerHTML = '<source src="video/partlycloudy_night_vid.mp4" type="video/mp4">';
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/partlycloudy_night_vid.png">';
 			}
 			else if (code == 28)
 			{
 				// mostly cloudy
 				//28 (day) 27(night)
 				console.log("Weather: Mostly Cloudy");
-				document.getElementById('background_vid').innerHTML = '<source src="video/mostlycloudy_vid.mp4" type="video/mp4">';
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/mostlycloudy_vid.png">';
 				
 			}
 			else if (code == 27)
 			{
 				// mostly cloudy night
 				console.log("Weather: Mostly Cloudy - Night");
-				document.getElementById('background_vid').innerHTML = '<source src="video/mostlycloudy_night_vid.mp4" type="video/mp4">';
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/mostlycloudy_night_vid.png">';
 			}
 			else if (code == 19 || code == 21 || code == 22)
 			{
 				// Dust, haze, smoke
 				//19 21 22
 				console.log("Weather: Visual Obstructions");
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/haze_vid.png">';
 			}
 			else if (code == 23 || code == 24)
 			{
 				// Wind
 				//23 24
 				console.log("Weather: Wind");
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/windy_vid.png">';
 			}
 			else if (code == 31 || code == 33)
 			{
 				// Clear Night
 				//31 33
 				console.log("Weather: Clear Night");
-				document.getElementById('background_vid').innerHTML = '<source src="video/moon_vid.mp4" type="video/mp4">';
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/moon_vid.png">';
 			}
 			else if (code == 32 || code == 34)
 			{
 				// Clear Day
 				//32 34 36(hot)
 				console.log("Weather: Clear Day");
-				document.getElementById('background_vid').innerHTML = '<source src="video/sun_vid.mp4" type="video/mp4">';
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/sun_vid.png">';
 			}
 			else if (code == 20 || code == 26)
 			{
 				// Cloudy / foggy
 				//20 26
 				console.log("Weather: Cloudy / Foggy");
-				document.getElementById('background_vid').innerHTML = '<source src="video/cloudy_vid.mp4" type="video/mp4">';
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/cloudy_vid.png">';
 			}
 			else if (code = 36)
 			{
 				// Hot
 				// 36
 				console.log("Weather: Hot");
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/hot_vid.png">';
 			}
 			else if (code == 25)
 			{
 				// Cold
 				//25
 				console.log("Weather: Cold");
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/cold_vid.png">';
 			}
 			else
 			{
 				// Code not found, basic video.
 				console.log("Weather: Code not found - switching to basic video");
-				document.getElementById('background_vid').innerHTML = '<source src="video/base2_vid.mp4" type="video/mp4">';
+				document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/base_vid.png">';
 				
 			}
 			
@@ -199,7 +203,7 @@ $.simpleWeather({
 			console.log("Weather: Bad things happened...");
 			console.log("Weather: Displaying basic video...");
 			console.log("Weather: " + error);
-			document.getElementById('background_vid').innerHTML = '<source src="video/base2_vid.mp4" type="video/mp4">';
+			document.getElementById('fullscreen_bg').innerHTML = '<img src="weather_images/900p/base_vid.png">';
 			document.getElementById('error').innerHTML = 'WEATHER ERROR: There was a problem retrieving the latest weather information.';
 		}		
 	});

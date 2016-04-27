@@ -1,5 +1,5 @@
 var NUM_OF_FEEDS = 3;
-var feeds = ["http://www.reddit.com/r/news/.rss", "http://www.reddit.com/r/gaming/.rss", "http://rss.cnn.com/rss/cnn_world.rss"]
+var feeds = ["http://www.reddit.com/r/news/.rss", "http://www.reddit.com/r/worldnews/.rss", "http://rss.cnn.com/rss/cnn_world.rss"]
 
 $(document).ready(function() {
 	//very basic, just making sure we're getting something...
